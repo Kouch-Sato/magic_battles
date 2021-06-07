@@ -15,13 +15,9 @@ public class RightMagic : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-
-
         if (Input.GetKeyDown(KeyCode.Space))
         {
             Instantiate(magicPrefab, gameObject.transform.position, Quaternion.identity);
         }
     }
-
-
 }
