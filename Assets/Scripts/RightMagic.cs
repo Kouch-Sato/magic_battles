@@ -17,7 +17,12 @@ public class RightMagic : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(magicPrefab, gameObject.transform.position, Quaternion.identity);
+            Instantiate(magicPrefab, transform.position, transform.rotation);
+        }
+
+        if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
+        {
+            Instantiate(magicPrefab, transform.position, transform.rotation);
         }
     }
 }
