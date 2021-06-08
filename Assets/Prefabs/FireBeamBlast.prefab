@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &344670232931725940
+--- !u!1 &1532366082762623111
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,10 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3544948365115845926}
-  - component: {fileID: 5891458588100782657}
-  - component: {fileID: 20131725964014913}
-  - component: {fileID: 9067846751179657337}
+  - component: {fileID: 2359502290025666517}
+  - component: {fileID: 4633684266781003954}
+  - component: {fileID: 1282128035569160114}
+  - component: {fileID: 5276355045665463493}
   m_Layer: 0
   m_Name: FireBeamBlast
   m_TagString: Untagged
@@ -19,28 +19,28 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3544948365115845926
+--- !u!4 &2359502290025666517
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344670232931725940}
+  m_GameObject: {fileID: 1532366082762623111}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -28.1, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 3551170090428782580}
+  - {fileID: 2361231408138579207}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &5891458588100782657
+--- !u!198 &4633684266781003954
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344670232931725940}
+  m_GameObject: {fileID: 1532366082762623111}
   serializedVersion: 7
   lengthInSec: 2
   simulationSpeed: 1
@@ -3580,7 +3580,7 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     range: {x: 0, y: 1}
   CollisionModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 4
     type: 1
     collisionMode: 0
@@ -3763,19 +3763,20 @@ ParticleSystem:
     maxCollisionShapes: 256
     quality: 0
     voxelSize: 0.5
-    collisionMessages: 0
+    collisionMessages: 1
     collidesWithDynamic: 1
     interiorCollisions: 1
   TriggerModule:
-    enabled: 1
+    enabled: 0
     serializedVersion: 2
     inside: 1
     outside: 0
-    enter: 0
+    enter: 2
     exit: 0
     colliderQueryMode: 0
     radiusScale: 1
     primitives:
+    - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
     - {fileID: 0}
@@ -4720,14 +4721,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &20131725964014913
+--- !u!199 &1282128035569160114
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344670232931725940}
+  m_GameObject: {fileID: 1532366082762623111}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -4786,20 +4787,19 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!65 &9067846751179657337
-BoxCollider:
+--- !u!114 &5276355045665463493
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 344670232931725940}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_GameObject: {fileID: 1532366082762623111}
   m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 3.5905528, y: 1.3918104, z: 6.0597463}
-  m_Center: {x: 0.61256456, y: -1.4093149, z: 1.2301271}
---- !u!1 &8221358045974635637
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8bdd045cb84418fa082d6cf3b7b459, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1 &7175549776358383238
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4807,9 +4807,9 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 3551170090428782580}
-  - component: {fileID: 6041674521912114549}
-  - component: {fileID: 6661159980574383544}
+  - component: {fileID: 2361231408138579207}
+  - component: {fileID: 4779686871972104070}
+  - component: {fileID: 5619855308366587723}
   m_Layer: 0
   m_Name: Sparks
   m_TagString: Untagged
@@ -4817,27 +4817,27 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &3551170090428782580
+--- !u!4 &2361231408138579207
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8221358045974635637}
+  m_GameObject: {fileID: 7175549776358383238}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 3544948365115845926}
+  m_Father: {fileID: 2359502290025666517}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!198 &6041674521912114549
+--- !u!198 &4779686871972104070
 ParticleSystem:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8221358045974635637}
+  m_GameObject: {fileID: 7175549776358383238}
   serializedVersion: 7
   lengthInSec: 3
   simulationSpeed: 1
@@ -8591,7 +8591,7 @@ ParticleSystem:
     collidesWithDynamic: 1
     interiorCollisions: 1
   TriggerModule:
-    enabled: 0
+    enabled: 1
     serializedVersion: 2
     inside: 1
     outside: 0
@@ -9544,14 +9544,14 @@ ParticleSystem:
         m_PostInfinity: 2
         m_RotationOrder: 4
     vectorLabel1_3: W
---- !u!199 &6661159980574383544
+--- !u!199 &5619855308366587723
 ParticleSystemRenderer:
   serializedVersion: 6
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8221358045974635637}
+  m_GameObject: {fileID: 7175549776358383238}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1

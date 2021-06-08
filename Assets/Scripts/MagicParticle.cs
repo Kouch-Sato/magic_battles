@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class EnemyManager : MonoBehaviour
+public class MagicParticle : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -14,5 +14,9 @@ public class EnemyManager : MonoBehaviour
     void Update()
     {
 
+    }
+
+    void OnParticleCollision(GameObject other) {
+        Debug.Log(222);
     }
 }
