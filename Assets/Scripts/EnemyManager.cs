@@ -4,13 +4,16 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-  public int maxHp = 100;
-  int hp;
+    public int maxHp = 100;
+    int hp;
 
-  // Start is called before the first frame update
-  void Start()
+    public EnemyUIManager enemyUIManager;
+
+    // Start is called before the first frame update
+    void Start()
     {
         hp = maxHp;
+        enemyUIManager.init(this);
     }
 
     // Update is called once per frame
@@ -23,5 +26,6 @@ public class EnemyManager : MonoBehaviour
     {
         hp -= damage;
         Debug.Log(hp);
+        enemyUIManager.UpdateHP(hp);
     }
 }
