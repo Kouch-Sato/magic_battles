@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class MagicParticle : MonoBehaviour
 {
+    public int damage;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -16,7 +18,12 @@ public class MagicParticle : MonoBehaviour
 
     }
 
-    void OnParticleCollision(GameObject other) {
-        Debug.Log(222);
+    void OnParticleCollision(GameObject other)
+    {
+        Debug.Log(other.name);
+        if (other.tag == "Enemy")
+        {
+            other.GetComponent<EnemyManager>().GetDamage(damage);
+        }
     }
 }

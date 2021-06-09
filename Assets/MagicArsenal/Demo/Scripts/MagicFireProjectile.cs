@@ -4,7 +4,7 @@ using System.Collections;
 
 namespace MagicArsenal
 {
-public class MagicFireProjectile : MonoBehaviour 
+public class MagicFireProjectile : MonoBehaviour
 {
     RaycastHit hit;
     public GameObject[] projectiles;
@@ -16,12 +16,12 @@ public class MagicFireProjectile : MonoBehaviour
 //    MyGUI _GUI;
 	MagicButtonScript selectedProjectileButton;
 
-	void Start () 
+	void Start ()
 	{
 		selectedProjectileButton = GameObject.Find("Button").GetComponent<MagicButtonScript>();
 	}
 
-	void Update () 
+	void Update ()
 	{
 		if (Input.GetKeyDown(KeyCode.RightArrow))
         {
@@ -53,7 +53,7 @@ public class MagicFireProjectile : MonoBehaviour
                     projectile.transform.LookAt(hit.point);
                     projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * speed);
                     projectile.GetComponent<MagicProjectileScript>().impactNormal = hit.normal;
-                }  
+                }
             }
 
         }

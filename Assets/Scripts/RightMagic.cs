@@ -17,12 +17,24 @@ public class RightMagic : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            Instantiate(magicPrefab, transform.position, transform.rotation);
+            // Instantiate(magicPrefab, transform.position, Quaternion.FromToRotation(Vector3.up, transform.rotation));
+            // Instantiate(magicPrefab, transform.position, transform.rotation);
+
+            GameObject projectile = Instantiate(magicPrefab, transform.position, transform.rotation) as GameObject;
+            // projectile.transform.LookAt(transform.rotation);
+            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 1000);
+            // projectile.GetComponent<MagicProjectileScript>().impactNormal = hit.normal;
         }
 
         if (OVRInput.GetDown(OVRInput.RawButton.RIndexTrigger))
         {
-            Instantiate(magicPrefab, transform.position, transform.rotation);
+            // Instantiate(magicPrefab, transform.position, Quaternion.FromToRotation(Vector3.up, transform.rotation));
+            // Instantiate(magicPrefab, transform.position, transform.rotation);
+
+            GameObject projectile = Instantiate(magicPrefab, transform.position, transform.rotation) as GameObject;
+            // projectile.transform.LookAt(transform.rotation);
+            projectile.GetComponent<Rigidbody>().AddForce(projectile.transform.forward * 1000);
+            // projectile.GetComponent<MagicProjectileScript>().impactNormal = hit.normal;
         }
     }
 }
