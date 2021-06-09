@@ -4,10 +4,13 @@ using UnityEngine;
 
 public class EnemyManager : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
+  public int maxHp = 100;
+  int hp;
 
+  // Start is called before the first frame update
+  void Start()
+    {
+        hp = maxHp;
     }
 
     // Update is called once per frame
@@ -16,9 +19,9 @@ public class EnemyManager : MonoBehaviour
 
     }
 
-    private void OnTriggerEnter(Collider other)
+    public void GetDamage(int damage)
     {
-        transform.position += new Vector3(1, 0, 0);
-        Debug.Log("aaa");
+        hp -= damage;
+        Debug.Log(hp);
     }
 }
